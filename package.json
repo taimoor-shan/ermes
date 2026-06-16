@@ -1,0 +1,48 @@
+{
+  "name": "decap-starter",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "pnpm build:tailwind && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "sync": "astro sync",
+    "build:tailwind": "tailwindcss -i src/assets/styles/global.css -o public/preview.css",
+    "dev:tailwind": "tailwindcss -i src/assets/styles/global.css -o public/preview.css --watch"
+  },
+  "dependencies": {
+    "@astrojs/node": "^9.4.3",
+    "astro": "^5.13.5",
+    "sharp": "^0.34.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@tailwindcss/cli": "^4.1.13",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.1.13",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "eslint": "^9.35.0",
+    "eslint-config-prettier": "^9.1.2",
+    "eslint-formatter-codeframe": "^7.32.1",
+    "eslint-plugin-astro": "^1.3.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.3.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "tailwindcss": "^4.1.13",
+    "vite-plugin-static-copy": "^3.1.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "@tailwindcss/oxide",
+      "@parcel/watcher"
+    ]
+  }
+}
